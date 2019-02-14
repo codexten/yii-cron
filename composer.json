@@ -3,6 +3,7 @@
   "type": "library",
   "description": "Metronic Theme integration",
   "require": {
+    "codexten/yii-core": "~2.0",
     "voodoo-mobile/yii2-cron": "*"
   },
   "autoload": {
@@ -14,14 +15,8 @@
     "branch-alias": {
       "dev-master": "2.0.x-dev"
     },
-    "sconfig-plugin": {
-      "metronic": [
-        "$vue",
-        "src/config/metronic.php"
-      ],
-      "params": "src/config/params.php",
-      "console": "src/config/console.php",
-      "hidev": "src/hidev/config/hidev.php"
+    "config-plugin": {
+      "cron": "src/config/cron.php"
     }
   }
 }
