@@ -1,26 +1,17 @@
 {
-  "name": "codexten/yii-metronic",
+  "name": "codexten/yii-cron",
   "type": "library",
   "description": "Metronic Theme integration",
-  "require": {
-    "yiisoft/yii2-bootstrap4": "~1.0.0",
-    "mzdani/yii2-webfont-loader": "dev-master",
-    "npm-asset/select2": "~4.0",
-    "enterosoft/yii2-perfect-scrollbar": "dev-master",
-    "entero/entero-web": "~2.0.0",
-    "entero/entero-app-console": "~2.0.0",
-    "codexten/yii-settings": "~2.0.0"
-  },
   "autoload": {
     "psr-4": {
-      "entero\\metronic\\": "src"
+      "codexten\\yii\\cron\\": "src"
     }
   },
   "extra": {
     "branch-alias": {
       "dev-master": "2.0.x-dev"
     },
-    "config-plugin": {
+    "sconfig-plugin": {
       "metronic": [
         "$vue",
         "src/config/metronic.php"
