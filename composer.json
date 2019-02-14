@@ -4,7 +4,7 @@
   "description": "Metronic Theme integration",
   "require": {
     "voodoo-mobile/yii2-cron": "*"
-  }
+  },
   "autoload": {
     "psr-4": {
       "codexten\\yii\\cron\\": "src"
