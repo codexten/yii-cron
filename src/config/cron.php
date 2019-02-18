@@ -9,7 +9,7 @@
 return [
     'modules' => [
         'cron' => [
-            'class' => \vm\cron\CronModule::class,
+            'class' => \codexten\yii\cron\CronModule::class,
         ],
     ],
 ];

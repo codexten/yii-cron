@@ -4,7 +4,7 @@
   "description": "Metronic Theme integration",
   "require": {
     "codexten/yii-core": "~2.0",
-    "voodoo-mobile/yii2-cron": "*"
+    "mtdowling/cron-expression": "~1.1"
   },
   "autoload": {
     "psr-4": {
@@ -16,7 +16,8 @@
       "dev-master": "2.0.x-dev"
     },
     "config-plugin": {
-      "cron": "src/config/cron.php"
+      "cron": "src/config/cron.php",
+      "migrationNamespaces": "src/config/migrationNamespaces.php"
     }
   }
 }
