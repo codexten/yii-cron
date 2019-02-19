@@ -1,0 +1,12 @@
+config:
+  messageCategory: codexten:cron
+migration:
+  create_cron_task_table:
+    fields: |
+      name:string(255),
+      comment:string(255),
+      run_time:string(64),
+      run_command:text,
+      status:smallInteger,
+      created_at:integer(11),
+      updated_at:integer(11)
