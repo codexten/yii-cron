@@ -5,16 +5,16 @@ namespace codexten\yii\cron\migrations;
 use yii\db\Migration;
 
 /**
- * Handles the creation of table `{{%cron_task}}`.
+ * Handles the creation of table `{{%cron_job}}`.
  */
-class M190219083706Create_cron_task_table extends Migration
+class M190219114222Create_cron_job_table extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable('{{%cron_task}}', [
+        $this->createTable('{{%cron_job}}', [
             'id' => $this->primaryKey(),
             'name' => $this->string(255),
             'comment' => $this->string(255),
@@ -31,6 +31,6 @@ class M190219083706Create_cron_task_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('{{%cron_task}}');
+        $this->dropTable('{{%cron_job}}');
     }
 }

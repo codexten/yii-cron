@@ -10,3 +10,5 @@ migration:
       status:smallInteger,
       created_at:integer(11),
       updated_at:integer(11)
+model:
+  cron_job:
