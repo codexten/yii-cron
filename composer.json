@@ -17,6 +17,7 @@
     },
     "config-plugin": {
       "cron": "src/config/cron.php",
+      "console": "src/config/console.php",
       "migrationNamespaces": "src/config/migrationNamespaces.php"
     }
   }
