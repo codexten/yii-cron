@@ -19,7 +19,7 @@ class Task extends ActiveRecord implements TaskInterface
 {
     public static function tableName()
     {
-        return 'tasks';
+        return '{{%}}';
     }
 
     public static function taskGet($task_id)

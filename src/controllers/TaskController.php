@@ -16,7 +16,7 @@ use codexten\yii\cron\TasksAsset;
  *
  * @package codexten\yii\cron\controllers
  */
-class TasksController extends Controller
+class TaskController extends Controller
 {
     private static $tasks_controllers_folder;
     private static $tasks_namespace;
