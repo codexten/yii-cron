@@ -8,13 +8,11 @@
 
 namespace codexten\yii\cron\controllers;
 
-use yii\web\Controller;
+use codexten\yii\cron\models\CronJob;
+use codexten\yii\web\CrudController;
 
-class CronJobController extends Controller
+class CronJobController extends CrudController
 {
-    public function actionIndex()
-    {
+    public $modelClass = CronJob::class;
 
-        return $this->render('index');
-    }
 }
