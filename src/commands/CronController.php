@@ -8,6 +8,12 @@ use yii\console\Controller;
 
 class CronController extends Controller
 {
+    public function actionCheck()
+    {
+
+    }
+
+
     public function actionCheckTasks()
     {
         TaskRunner::checkAndRunTasks(Task::getAll());

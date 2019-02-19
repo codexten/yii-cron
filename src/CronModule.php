@@ -14,6 +14,8 @@ class CronModule extends \yii\base\Module
 {
     public $controllerNamespace = 'codexten\yii\cron\controllers';
 
+    public $defaultRoute = 'cron-job';
+
     /**
      * @throws Exception
      */
