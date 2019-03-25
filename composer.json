@@ -4,7 +4,7 @@
   "description": "Metronic Theme integration",
   "require": {
     "codexten/yii-web": "~2.0",
-    "mtdowling/cron-expression": "~1.1"
+    "mult1mate/cron-manager": "*"
   },
   "autoload": {
     "psr-4": {

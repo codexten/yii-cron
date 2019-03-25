@@ -2,6 +2,7 @@
 
 namespace codexten\yii\cron\components;
 
+use codexten\yii\cron\models\CronJob;
 use Cron\CronExpression;
 
 /**
@@ -13,7 +14,7 @@ class TaskRunner
     /**
      * Runs active tasks if current time matches with time expression
      *
-     * @param array $tasks
+     * @param CronJob[] $tasks
      */
     public static function checkAndRunTasks($tasks)
     {
@@ -22,9 +23,9 @@ class TaskRunner
             /**
              * @var TaskInterface $t
              */
-            if (TaskInterface::TASK_STATUS_ACTIVE != $t->getStatus()) {
-                continue;
-            }
+//            if (TaskInterface::TASK_STATUS_ACTIVE != $t->getStatus()) {
+//                continue;
+//            }
 
             $cron = CronExpression::factory($t->getTime());
 
