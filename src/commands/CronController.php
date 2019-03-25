@@ -10,7 +10,7 @@ class CronController extends Controller
 {
     public function actionCheck()
     {
-
+        echo "worked at : " . \Yii::$app->formatter->asDatetime(time());
     }
 
 
