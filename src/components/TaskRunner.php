@@ -3,6 +3,7 @@
 namespace codexten\yii\cron\components;
 
 use codexten\yii\cron\models\CronJob;
+use codexten\yii\helpers\FileHelper;
 use Cron\CronExpression;
 
 /**
@@ -15,22 +16,28 @@ class TaskRunner
      * Runs active tasks if current time matches with time expression
      *
      * @param CronJob[] $tasks
+     *
+     * @throws \yii\base\Exception
      */
     public static function checkAndRunTasks($tasks)
     {
         $date = date('Y-m-d H:i:s');
+        FileHelper::createDirectory(\Yii::getAlias('@runtime/cron/'));
         foreach ($tasks as $t) {
-            /**
-             * @var TaskInterface $t
-             */
+//            /**
+//             * @var TaskInterface $t
+//             */
 //            if (TaskInterface::TASK_STATUS_ACTIVE != $t->getStatus()) {
 //                continue;
 //            }
 
-            $cron = CronExpression::factory($t->getTime());
+            $cron = CronExpression::factory($t->run_time);
 
             if ($cron->isDue($date)) {
-                self::runTask($t);
+                $logFile = \Yii::getAlias('@runtime/cron/' . time().rand(1,10) . '.log');
+//                echo "{$t->run_command} > {$logFile} &\n";
+                exec("{$t->run_command} > {$logFile} &");
+//                self::runTask($t);
             }
         }
     }
