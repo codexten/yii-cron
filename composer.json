@@ -16,9 +16,9 @@
       "dev-master": "2.0.x-dev"
     },
     "config-plugin": {
-      "cron": "src/config/cron.php",
-      "console": "src/config/console.php",
-      "migrationNamespaces": "src/config/migrationNamespaces.php"
+      "cron": "config/cron.php",
+      "console": "config/console.php",
+      "migrationNamespaces": "config/migrationNamespaces.php"
     }
   }
 }
