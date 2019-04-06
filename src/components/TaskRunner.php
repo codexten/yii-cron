@@ -36,7 +36,8 @@ class TaskRunner
             if ($cron->isDue($date)) {
                 $logFile = \Yii::getAlias('@runtime/cron/' . time().rand(1,10) . '.log');
 //                echo "{$t->run_command} > {$logFile} &\n";
-                exec("{$t->run_command} > {$logFile} &");
+//                exec("{$t->run_command} > {$logFile} &");
+                exec("{$t->run_command}");
 //                self::runTask($t);
             }
         }
